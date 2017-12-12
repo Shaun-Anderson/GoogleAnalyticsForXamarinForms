@@ -16,7 +16,7 @@
     <DevInstrumentationEnabled>True</DevInstrumentationEnabled>
      <TargetFrameworks>netstandard2.0</TargetFrameworks>
      <TargetFramework>monoandroid8.0</TargetFramework>
-    <TargetFramework>monoandroid8.0</TargetFramework>
+    <TargetFramework>monoandroid23</TargetFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
