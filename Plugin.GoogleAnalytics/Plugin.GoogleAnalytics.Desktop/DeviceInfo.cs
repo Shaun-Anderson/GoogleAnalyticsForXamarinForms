@@ -19,16 +19,17 @@ namespace Plugin.GoogleAnalytics
 
             UserAgent = $"Mozilla/5.0 (Windows NT {Environment.OSVersion.Version.Major}.{Environment.OSVersion.Version.Minor}; Trident/7.0; rv:11.0) like Gecko";
 
-            var left = System.Windows.Forms.Screen.AllScreens.Min(screen => screen.Bounds.X);
+            /*var left = System.Windows.Forms.Screen.AllScreens.Min(screen => screen.Bounds.X);
             var top = System.Windows.Forms.Screen.AllScreens.Min(screen => screen.Bounds.Y);
             var right = System.Windows.Forms.Screen.AllScreens.Max(screen => screen.Bounds.X + screen.Bounds.Width);
             var bottom = System.Windows.Forms.Screen.AllScreens.Max(screen => screen.Bounds.Y + screen.Bounds.Height);
-
+        
             var w = right - left;
             var h = bottom - top;
 
             Display = new Dimensions((int)w, (int)h);
             ViewPortResolution = new Dimensions((int)w, (int)h);
+            */
         }
 
         public string Model
