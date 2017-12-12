@@ -16,6 +16,7 @@
     <DevInstrumentationEnabled>True</DevInstrumentationEnabled>
      <TargetFrameworks>netstandard2.0</TargetFrameworks>
      <TargetFramework>monoandroid8.0</TargetFramework>
+    <TargetFramework>monoandroid8.0</TargetFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,6 +36,7 @@
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\Plugin.GoogleAnalytics.xml</DocumentationFile>
   </PropertyGroup>
+	
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
@@ -44,18 +46,11 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
   </ItemGroup>
+	
   <ItemGroup>
-    <Compile Include="..\Plugin.GoogleAnalytics\GoogleAnalytics.cs">
-      <Link>GoogleAnalytics.cs</Link>
-    </Compile>
-    <Compile Include="DeviceInfo.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
-    <Compile Include="GoogleAnalyticsPlatform.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
-    <Compile Include="PlatformInfoProvider.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
-    <Compile Include="Properties\AssemblyInfo.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
-    <Compile Include="..\..\GoogleAnalytics.Shared\Properties\SharedAssemblyInfo.cs">
-      <Link>Properties\SharedAssemblyInfo.cs</Link>
-    </Compile>
+    <Compile Include="..\Plugin.GoogleAnalytics\GoogleAnalytics.cs" />
   </ItemGroup>
+	
   <ItemGroup>
     <ProjectReference Include="..\Plugin.GoogleAnalytics.Abstractions\Plugin.GoogleAnalytics.Abstractions.csproj">
     </ProjectReference>
