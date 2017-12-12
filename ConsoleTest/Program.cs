@@ -10,19 +10,22 @@ namespace TestConsoleApplication
     {
         private static void Main(string[] args)
         {
-            GoogleAnalytics.Current.Config.TrackingId = "UA-11111111-1";
-            GoogleAnalytics.Current.Config.AppId = "AppID";
-            GoogleAnalytics.Current.Config.AppName = "TEST";
+            GoogleAnalytics.Current.Config.TrackingId = "UA-111100189-1";
+            GoogleAnalytics.Current.Config.AppId = "TestAccount";
+            GoogleAnalytics.Current.Config.AppName = "TestApp";
             GoogleAnalytics.Current.Config.AppInstallerId = Guid.NewGuid().ToString();
             GoogleAnalytics.Current.Tracker.UserAgentOverride = "dfsfsdf";
 
-            //  GoogleAnalytics.Current.Config.Debug = true;
+            GoogleAnalytics.Current.Config.Debug = true;
             GoogleAnalytics.Current.InitTracker();
+            Console.WriteLine("Started...");
+
 
             try
             {
                 GoogleAnalytics.Current.Tracker.SendView("");
                 GoogleAnalytics.Current.Tracker.SendView("MainPage");
+                Console.WriteLine("Trying to send data...");
             }
             catch (Exception ex)
             {
