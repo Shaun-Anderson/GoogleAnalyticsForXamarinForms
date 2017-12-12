@@ -41,9 +41,9 @@ namespace TestFormsApp
 
         private void B_Clicked(object sender, EventArgs e)
         {
-            GoogleAnalytics.Current.Config.TrackingId = "UA-11111111-1";
-            GoogleAnalytics.Current.Config.AppId = "AppID";
-            GoogleAnalytics.Current.Config.AppName = "TEST";
+            GoogleAnalytics.Current.Config.TrackingId = "UA-111100189-1";
+            GoogleAnalytics.Current.Config.AppId = "TestAccount";
+            GoogleAnalytics.Current.Config.AppName = "TestApp";
             GoogleAnalytics.Current.Config.AppInstallerId = "someID";
             //GoogleAnalytics.Current.Config.Debug = true;
             GoogleAnalytics.Current.InitTracker();
