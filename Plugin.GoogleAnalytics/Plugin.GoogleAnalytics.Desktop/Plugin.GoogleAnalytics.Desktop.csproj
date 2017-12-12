@@ -21,8 +21,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
 	</PropertyGroup>
+
+    <ItemGroup>
+    <Compile Include="..\Plugin.GoogleAnalytics\GoogleAnalytics.cs" />
+    <Compile Include="..\..\GoogleAnalytics.Shared\Properties\SharedAssemblyInfo.cs" />
+  </ItemGroup>
+	
   <ItemGroup>
     <ProjectReference Include="..\Plugin.GoogleAnalytics.Abstractions\Plugin.GoogleAnalytics.Abstractions.csproj">
     </ProjectReference>
   </ItemGroup>
+		<Import Project="..\..\GoogleAnalytics.Shared\GoogleAnalytics.Shared.projitems" Label="Shared" />
 </Project>
