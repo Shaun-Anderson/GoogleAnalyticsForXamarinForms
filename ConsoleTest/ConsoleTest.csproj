@@ -5,8 +5,6 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-	<ProjectReference Include="..\Plugin.GoogleAnalytics\Plugin.GoogleAnalytics\Plugin.GoogleAnalytics.csproj">
-	</ProjectReference>
     <ProjectReference Include="..\Plugin.GoogleAnalytics\Plugin.GoogleAnalytics.Abstractions\Plugin.GoogleAnalytics.Abstractions.csproj">
     </ProjectReference>
     <ProjectReference Include="..\Plugin.GoogleAnalytics\Plugin.GoogleAnalytics.Desktop\Plugin.GoogleAnalytics.Desktop.csproj">
