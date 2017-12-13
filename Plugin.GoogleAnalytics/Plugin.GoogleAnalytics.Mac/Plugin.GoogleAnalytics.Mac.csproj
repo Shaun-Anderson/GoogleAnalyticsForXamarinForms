@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-		<TargetFramework>xamarinmac20</TargetFramework>
+		<TargetFramework>xamarin.mac2.0</TargetFramework>
         <ApplicationIcon />
         <OutputType>Library</OutputType>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
@@ -64,13 +64,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\GoogleAnalytics.Shared\Properties\SharedAssemblyInfo.cs"/>
-    <Compile Include="..\Plugin.GoogleAnalytics\GoogleAnalytics.cs"/>
+    <Compile Include="..\..\GoogleAnalytics.Shared\Properties\SharedAssemblyInfo.cs" />
+    <Compile Include="..\Plugin.GoogleAnalytics\GoogleAnalytics.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Plugin.GoogleAnalytics.Abstractions\Plugin.GoogleAnalytics.Abstractions.csproj">
-      <Project>{6EDB0588-FFC5-4EF5-8A99-9E241D0F878D}</Project>
-      <Name>Plugin.GoogleAnalytics.Abstractions</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="..\..\GoogleAnalytics.Shared\GoogleAnalytics.Shared.projitems" Label="Shared" Condition="Exists('..\..\GoogleAnalytics.Shared\GoogleAnalytics.Shared.projitems')" />
