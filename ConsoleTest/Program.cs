@@ -16,20 +16,21 @@ namespace TestConsoleApplication
             GoogleAnalytics.Current.Config.AppInstallerId = Guid.NewGuid().ToString();
             GoogleAnalytics.Current.Tracker.UserAgentOverride = "dfsfsdf";
 
-            GoogleAnalytics.Current.Config.Debug = true;
+            //GoogleAnalytics.Current.Config.Debug = true;
             GoogleAnalytics.Current.InitTracker();
             Console.WriteLine("Started...");
 
+            GoogleAnalytics.Current.Tracker.SendView("MainPage");
+            Console.WriteLine("SendView");
 
             try
             {
-                GoogleAnalytics.Current.Tracker.SendView("");
                 GoogleAnalytics.Current.Tracker.SendView("MainPage");
                 Console.WriteLine("Trying to send data...");
             }
             catch (Exception ex)
             {
-                int a = 5;
+                Console.WriteLine("Error sending data: " + ex);
             }
 
             Console.ReadLine();
