@@ -20,13 +20,13 @@ namespace TestConsoleApplication
             GoogleAnalytics.Current.InitTracker();
             Console.WriteLine("Started...");
 
-            GoogleAnalytics.Current.Tracker.SendView("MainPage");
-            Console.WriteLine("SendView");
-
             try
             {
                 GoogleAnalytics.Current.Tracker.SendView("MainPage");
-                Console.WriteLine("Trying to send data...");
+                Console.WriteLine("Sending View");
+                GoogleAnalytics.Current.Tracker.SendEvent("Category", "Action", "Label", 1);
+                Console.WriteLine("Sending Event");
+
             }
             catch (Exception ex)
             {
