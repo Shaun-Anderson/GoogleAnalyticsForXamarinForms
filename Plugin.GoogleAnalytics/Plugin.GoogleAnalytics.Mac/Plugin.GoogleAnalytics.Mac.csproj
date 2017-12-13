@@ -1,5 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+		<TargetFramework>xamarinmac20</TargetFramework>
+        <ApplicationIcon />
+        <OutputType>Library</OutputType>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -58,16 +64,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="..\..\GoogleAnalytics.Shared\Properties\SharedAssemblyInfo.cs">
-      <Link>Properties\SharedAssemblyInfo.cs</Link>
-    </Compile>
-    <Compile Include="..\Plugin.GoogleAnalytics\GoogleAnalytics.cs">
-      <Link>GoogleAnalytics.cs</Link>
-    </Compile>
-    <Compile Include="DeviceInfo.cs" />
-    <Compile Include="PlatformInfoProvider.cs" />
-	<Compile Include="GoogleAnalyticsPlatform.cs" />
+    <Compile Include="..\..\GoogleAnalytics.Shared\Properties\SharedAssemblyInfo.cs"/>
+    <Compile Include="..\Plugin.GoogleAnalytics\GoogleAnalytics.cs"/>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Plugin.GoogleAnalytics.Abstractions\Plugin.GoogleAnalytics.Abstractions.csproj">
