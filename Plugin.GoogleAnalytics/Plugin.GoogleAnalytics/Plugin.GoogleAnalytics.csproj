@@ -3,6 +3,7 @@
         <TargetFrameworks>netstandard2.0</TargetFrameworks>
         <ApplicationIcon />
         <OutputType>Library</OutputType>
+		 <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
